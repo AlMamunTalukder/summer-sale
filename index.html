@@ -173,7 +173,8 @@
                     <h2 class="card-title">Have coupon?</h2>
                     <div class="join ">
                       <input class="input input-bordered join-item" id="discountCode" placeholder="Coupon code"/>
-                      <button class="btn join-item bg-sale-bg text-white" id="apply-Discount" disabled>Apply</button>
+                      <button class="btn join-item bg-sale-bg text-white" id="apply-Discount" disabled onclick="applyDiscount()">Apply</button>
+                      
                     </div>                                         
                   </div> 
                   
@@ -188,14 +189,19 @@
                     </div>
                     <hr>
                     <p>Total Price: <span id="total-Price">0</span></p>
-                    <p>Discount: <span id="discount-Amount">0</span></p>
+                    <p>Discount: <span id="discountAmount">0</span></p>
                     <p>Price: <span id="final-Price">0</span></p>  <hr>            
                   </div>
                   
                 </div>    
                 <div class="relative">
                   <div class="hidden lg:flex justify-center text-center rounded -m-6  ">               
-                    <button class="btn join-item bg-sale-bg text-white w-[294px]" onclick="my_modal_5.showModal()" id="makePurchase" disabled>Make Purchase</button>
+                    
+
+                    <button class="btn join-item bg-sale-bg text-white w-[294px]" id="makePurchase" disabled onclick="my_modal_5.showModal()">Make Purchase</button>
+
+
+
                     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                       <form method="dialog" class="modal-box w-96">
                         <div class="card ">
@@ -206,7 +212,7 @@
                         <h3 class="font-bold text-lg">Congratulations</h3>
                         <p class="py-4">Your Purchase the product</p>
                         <div class="center">                          
-                          <button class="btn bg-sale-bg">Go Home</button>
+                          <button class="btn bg-sale-bg" onclick="goHome()">Go Home</button>
                         </div>
                       </form>
                     </dialog>
@@ -215,20 +221,9 @@
               </div>
 
             </div>        
-      </section>
+      </section> 
+    </main>    
 
-     
-
-
-    </main>
-    
-
-
-     
-
-
-      
-    
   <script src="js/script.js"></script>
 </body>
 </html>
