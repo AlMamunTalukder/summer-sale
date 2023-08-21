@@ -13,9 +13,7 @@ function handleClick(target) {
     selectedIndex++;
 
 
-    // console.log(target.querySelector("h1").innerText.split(" "))
-
-    // const price = target.parentNode.childNodes[5].innerText.split(" ")[1]; 
+    
     const price = target.querySelector("h1").innerText.split(" ")[0]; 
 
     total = parseInt(total) + parseInt(price); 
@@ -23,7 +21,12 @@ function handleClick(target) {
 
 
     const applyButton = document.getElementById("apply-Discount");
-    applyButton.disabled = total >= 200 ? false : true;
+   
+
+    if (total >= 200) {
+        applyButton.disabled = false;
+    }    
+    makePurchase.disabled = false;
     
   }
 
