@@ -37,6 +37,7 @@ let total = 0;
 
 
   function goHome() {
+    document.getElementById("discountCode").value = "";
     document.getElementById("ordered-list").innerHTML = "";
     document.getElementById("total-Price").innerText = "0 TK";
     document.getElementById("discountAmount").innerText = "0 TK";
